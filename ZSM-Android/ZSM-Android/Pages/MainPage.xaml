@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZSM_Android.MainPage"
+             BackgroundColor="#0071cc">
+
+    <StackLayout BackgroundColor="#0071cc" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="ZSM-Android" HorizontalTextAlignment="Center" TextColor="White" FontSize="40" Margin="0,30"/>
+        <Frame BorderColor="Black" CornerRadius="10" Padding="0" BackgroundColor="White" WidthRequest="300">
+            <Entry Text="{Binding AdresIp}" MaxLength="15" Placeholder="Adres ip" Margin="10,10,10,10"></Entry>
+        </Frame>
+        <Frame BorderColor="Black" CornerRadius="10" Padding="0" BackgroundColor="White">
+            <Entry Text="{Binding Port}" MaxLength="5" Keyboard="Numeric" Placeholder="Port" Margin="10,10,10,10"></Entry>
+        </Frame>
+        <Frame BorderColor="Black" CornerRadius="10" Padding="0" BackgroundColor="White">
+            <Entry Text="{Binding Login}" MaxLength="20" Placeholder="Login" Margin="10,10,10,10"></Entry>
+        </Frame>
+        <Frame BorderColor="Black" CornerRadius="10" Padding="0" BackgroundColor="White">
+            <Entry Text="{Binding Password}" MaxLength="30" IsPassword="True" Placeholder="Hasło" Margin="10,10,10,10"></Entry>
+        </Frame>
+        <!--<Label Text="{Binding DisplayMessage}" FontSize="18" Margin="30,0" TextColor="#990055"/>-->
+        <Button Command="{Binding ConnectCommand}" Text="Połącz" FontSize="20" HeightRequest="60" CornerRadius="10" Padding="5" Margin="0,30,0,10" BackgroundColor="White"></Button>
+    </StackLayout>
+</ContentPage>
